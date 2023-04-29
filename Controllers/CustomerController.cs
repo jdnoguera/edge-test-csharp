@@ -1,8 +1,9 @@
-﻿using backend_test.Models;
-using backend_test.Services;
+﻿using edge_test_csharp.Infrastructure;
+using edge_test_csharp.Models;
+using edge_test_csharp.Services;
 using Microsoft.AspNetCore.Mvc;
 
-namespace backend_test.Controllers;
+namespace edge_test_csharp.Controllers;
 
 [ApiController]
 [Route("[controller]")]
@@ -21,7 +22,7 @@ public class CustomerController : ControllerBase
         return Ok(await _service.GetAll(pageIndex, pageSize, cancellationToken));
     }
 
-    [HttpGet("{id}")]
+    [HttpGet("{id:int}")]
     public async Task<ActionResult<Customer>> GetCustomer(int id, CancellationToken cancellationToken)
     {
         var customer = await _service.GetById(id, cancellationToken);
@@ -29,20 +30,20 @@ public class CustomerController : ControllerBase
     }
     
     [HttpPost]
-    public async Task<ActionResult<List<Customer>>> AddTodo(CreateOrUpdateCustomerModel model, CancellationToken cancellationToken)
+    public async Task<ActionResult<List<Customer>>> Create(CreateOrUpdateCustomerModel model, CancellationToken cancellationToken)
     {
         await _service.CreateCustomer(model, cancellationToken);
         return StatusCode(201);
     }
 
-    [HttpPut("{id}")]
+    [HttpPut("{id:int}")]
     public async Task<ActionResult> Update(int id, CreateOrUpdateCustomerModel model,CancellationToken cancellationToken)
     {
         await _service.Update(id, model, cancellationToken);
         return Ok();
     }
 
-    [HttpDelete("{id}")]
+    [HttpDelete("{id:int}")]
     public async Task<ActionResult> DeleteById(int id, CancellationToken cancellationToken)
     {
         await _service.DeleteById(id, cancellationToken);

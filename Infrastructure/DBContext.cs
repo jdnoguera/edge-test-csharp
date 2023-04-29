@@ -1,7 +1,6 @@
-﻿
-using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.EntityFrameworkCore;
 
-namespace backend_test;
+namespace edge_test_csharp.Infrastructure;
 
 public class DBContext: DbContext
 {

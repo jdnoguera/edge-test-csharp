@@ -1,6 +1,7 @@
-﻿using backend_test.Models;
+﻿using edge_test_csharp.Infrastructure;
+using edge_test_csharp.Models;
 
-namespace backend_test.Services;
+namespace edge_test_csharp.Services;
 
 public interface ICustomerService
 {

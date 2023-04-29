@@ -3,11 +3,11 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
-using backend_test;
+using edge_test_csharp.Infrastructure;
 
 #nullable disable
 
-namespace backend_test.Migrations
+namespace edge_test_csharp.Migrations
 {
     [DbContext(typeof(DBContext))]
     [Migration("20230428000610_InitialCreate")]
@@ -19,7 +19,7 @@ namespace backend_test.Migrations
 #pragma warning disable 612, 618
             modelBuilder.HasAnnotation("ProductVersion", "8.0.0-preview.3.23174.2");
 
-            modelBuilder.Entity("backend_test.Customer", b =>
+            modelBuilder.Entity("edge_test_csharp.Customer", b =>
                 {
                     b.Property<string>("Id")
                         .HasColumnType("TEXT");

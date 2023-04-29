@@ -1,4 +1,4 @@
-﻿namespace backend_test;
+﻿namespace edge_test_csharp.Infrastructure;
 
 public class Customer
 {

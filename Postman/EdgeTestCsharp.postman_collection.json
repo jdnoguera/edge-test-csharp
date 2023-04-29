@@ -1,0 +1,133 @@
+{
+	"info": {
+		"_postman_id": "4b1d9aa9-28bb-4ced-bfc1-ee4ed645237e",
+		"name": "EdgeTestCsharp",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Customer",
+			"item": [
+				{
+					"name": "getAll",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:7201/Customer",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7201",
+							"path": [
+								"Customer"
+							],
+							"query": [
+								{
+									"key": "pageIndex",
+									"value": "0",
+									"disabled": true
+								},
+								{
+									"key": "pageSize",
+									"value": "5",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getById",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:7201/Customer/1",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7201",
+							"path": [
+								"Customer",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "create",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"firstName\": \"Cristiano\",\r\n  \"lastName\": \"Ronaldo\",\r\n  \"documentNumber\": \"7\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://localhost:7201/Customer",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7201",
+							"path": [
+								"Customer"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "updateById",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:7201/Customer/1",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7201",
+							"path": [
+								"Customer",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "deleteById",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "https://localhost:7201/Customer/6",
+							"protocol": "https",
+							"host": [
+								"localhost"
+							],
+							"port": "7201",
+							"path": [
+								"Customer",
+								"6"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

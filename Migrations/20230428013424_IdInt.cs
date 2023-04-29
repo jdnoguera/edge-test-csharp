@@ -2,7 +2,7 @@
 
 #nullable disable
 
-namespace backend_test.Migrations
+namespace edge_test_csharp.Migrations
 {
     /// <inheritdoc />
     public partial class IdInt : Migration

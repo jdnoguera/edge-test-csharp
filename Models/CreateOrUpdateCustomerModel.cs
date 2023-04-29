@@ -1,6 +1,6 @@
 ﻿using System.ComponentModel.DataAnnotations;
 
-namespace backend_test.Models;
+namespace edge_test_csharp.Models;
 
 public class CreateOrUpdateCustomerModel
 {

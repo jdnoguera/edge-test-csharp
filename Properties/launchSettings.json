@@ -9,10 +9,10 @@
     }
   },
   "profiles": {
-    "backend_test": {
+    "edge_test_csharp": {
       "commandName": "Project",
       "dotnetRunMessages": true,
-      "launchBrowser": false,
+      "launchBrowser": true,
       "launchUrl": "swagger",
       "applicationUrl": "https://localhost:7201;http://localhost:5163",
       "environmentVariables": {

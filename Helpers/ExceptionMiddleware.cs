@@ -1,6 +1,6 @@
 ﻿using System.Text.Json;
 
-namespace backend_test;
+namespace edge_test_csharp;
 
 public class ExceptionMiddleware : IMiddleware
 {

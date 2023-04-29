@@ -1,5 +1,6 @@
-using backend_test;
-using backend_test.Services;
+using edge_test_csharp;
+using edge_test_csharp.Infrastructure;
+using edge_test_csharp.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
